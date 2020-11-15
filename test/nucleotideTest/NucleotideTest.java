@@ -47,4 +47,6 @@ public class NucleotideTest  {
         Nucleotide.getAssociateRNANucleotide(Nucleotide.U.nitrogenBase);
     }
 
+
+
 }
