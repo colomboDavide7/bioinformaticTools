@@ -1,8 +1,6 @@
 package com.githubcolomboDavide7.sequence;
 
 import com.githubcolomboDavide7.Nucleotide.Nucleotide;
-import com.githubcolomboDavide7.utils.DoubleFilamentFactory;
-import com.githubcolomboDavide7.utils.SingleFilamentFactory;
 
 public abstract class DoubleFilamentSequence extends Sequence {
 

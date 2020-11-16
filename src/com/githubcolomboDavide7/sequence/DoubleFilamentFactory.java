@@ -1,7 +1,5 @@
-package com.githubcolomboDavide7.utils;
+package com.githubcolomboDavide7.sequence;
 
-import com.githubcolomboDavide7.sequence.DNASequence;
-import com.githubcolomboDavide7.sequence.DoubleFilamentSequence;
 
 public class DoubleFilamentFactory {
 

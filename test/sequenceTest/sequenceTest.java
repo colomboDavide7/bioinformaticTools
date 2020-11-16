@@ -1,7 +1,7 @@
 package sequenceTest;
 
 import com.githubcolomboDavide7.sequence.*;
-import com.githubcolomboDavide7.utils.DoubleFilamentFactory;
+import com.githubcolomboDavide7.sequence.DoubleFilamentFactory;
 import org.junit.*;
 
 import static org.junit.Assert.*;

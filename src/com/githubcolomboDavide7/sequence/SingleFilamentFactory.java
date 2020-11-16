@@ -1,7 +1,4 @@
-package com.githubcolomboDavide7.utils;
-
-import com.githubcolomboDavide7.sequence.SingleFilamentSequence;
-import com.githubcolomboDavide7.sequence.mRNASequence;
+package com.githubcolomboDavide7.sequence;
 
 public class SingleFilamentFactory {
 
