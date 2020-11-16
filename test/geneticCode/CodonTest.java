@@ -1,9 +1,6 @@
 package geneticCode;
 
-import com.githubcolomboDavide7.geneticCode.Codon;
-import com.githubcolomboDavide7.geneticCode.CodonFactory;
-import com.githubcolomboDavide7.geneticCode.EncodingCodon;
-import com.githubcolomboDavide7.geneticCode.MiddleSequenceCodon;
+import com.githubcolomboDavide7.geneticCode.*;
 import org.junit.Test;
 
 import java.util.List;
@@ -20,5 +17,17 @@ public class CodonTest {
         assertTrue(codons.get(0).matchCodon(toMatch));
     }
 
-    
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowIllegalArgumentException(){
+        System.out.println("* Genetic Code: shouldThrowIllegalArgumentException()\n");
+        ValidCodon.make("ATC");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenSequenceLengthIsNotMultipleOfThree(){
+        System.out.println("* Genetic Code: shouldThrowExceptionWhenSequenceLengthIsNotMultipleOfThree()\n");
+        CodonFactory.make(new StringBuilder().append("AUGAATGCGA"));
+        // TODO - evaluate if truncate the sequence or not
+    }
+
 }
