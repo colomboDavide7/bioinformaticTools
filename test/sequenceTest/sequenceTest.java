@@ -1,8 +1,6 @@
 package sequenceTest;
 
-import com.githubcolomboDavide7.sequence.DNASequence;
-import com.githubcolomboDavide7.sequence.DoubleFilamentSequence;
-import com.githubcolomboDavide7.sequence.Sequence;
+import com.githubcolomboDavide7.sequence.*;
 import com.githubcolomboDavide7.utils.DoubleFilamentFactory;
 import org.junit.*;
 
@@ -42,5 +40,13 @@ public class sequenceTest {
         assertTrue(reverseComplement.matchSequence(toMatch));
     }
 
+    @Test
+    public void shouldTranscriptDNA(){
+        System.out.println("* Double filament sequence: shouldTranscriptDNA()\n");
+        DoubleFilamentSequence dna = DoubleFilamentFactory.make("dna", new StringBuilder().append("ATGCTCGAATACTTGCAG"));
+        SingleFilamentSequence mrna = dna.transcript();
+        SingleFilamentSequence toMatch = new mRNASequence(new StringBuilder().append("UACGAGCUUAUGAACGUC"));
+        assertTrue(mrna.matchSequence(toMatch));
+    }
 
 }

@@ -14,7 +14,7 @@ public enum Nucleotide {
         this.nitrogenBase = nitrogenBase;
     }
 
-    public static char getNucleotideByNitrogenBase(char nucleotide){
+    public static char getNucleotide(char nucleotide){
         for(Nucleotide n : Nucleotide.values())
             if(n.nitrogenBase == nucleotide)
                 return n.nitrogenBase;

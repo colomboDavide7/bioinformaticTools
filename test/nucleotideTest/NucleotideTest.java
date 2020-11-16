@@ -9,14 +9,14 @@ public class NucleotideTest  {
     @Test
     public void shouldReturnNucleotideByNitrogenBase(){
         System.out.println("* Nucleotides: shouldReturnNucleotideByNitrogenBase()\n");
-        char nucleotide = Nucleotide.getNucleotideByNitrogenBase(Nucleotide.A.nitrogenBase);
+        char nucleotide = Nucleotide.getNucleotide(Nucleotide.A.nitrogenBase);
         assertEquals('A', nucleotide);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowIllegalArgumentException(){
         System.out.println("* Nucleotides: shouldThrowIllegalArgumentException()\n");
-        Nucleotide.getNucleotideByNitrogenBase('B');
+        Nucleotide.getNucleotide('B');
     }
 
     @Test
