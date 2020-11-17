@@ -18,6 +18,11 @@ public class Codon implements ICodon {
     }
 
     @Override
+    public boolean matchAmminoacid(String a) {
+        return ValidCodon.make(c).a.match(a);
+    }
+
+    @Override
     public boolean isStartCodon() {
         return ValidCodon.make(c).type == CodonType.START;
     }

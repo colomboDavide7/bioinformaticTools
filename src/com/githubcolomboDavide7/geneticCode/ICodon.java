@@ -4,6 +4,8 @@ public interface ICodon {
 
     boolean matchCodon(String codon);
 
+    boolean matchAmminoacid(String a);
+
     boolean isStartCodon();
 
     boolean isTerminationCodon();

@@ -44,5 +44,5 @@ public class CodonTest {
         List<ICodon> codons = SequenceConverter.sequence2CodonList(new StringBuilder("UACGAGCUUAUGAACGUCAA"));
         assertEquals("UACGAGCUUAUGAACGUCAA", SequenceConverter.codonList2Sequence(codons).toString());
     }
-    
+
 }
