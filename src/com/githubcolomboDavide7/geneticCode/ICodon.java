@@ -14,4 +14,6 @@ public interface ICodon {
 
     void appendCodon(StringBuilder sequence);
 
+    void appendAmminoacid(StringBuilder protein);
+
 }

@@ -42,4 +42,9 @@ public class Codon implements ICodon {
         sequence.append(this.c);
     }
 
+    @Override
+    public void appendAmminoacid(StringBuilder protein) {
+        protein.append(ValidCodon.make(this.c).a.toString());
+    }
+
 }
