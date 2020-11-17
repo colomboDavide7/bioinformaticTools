@@ -10,4 +10,6 @@ public interface ICodon {
 
     boolean isUndefined();
 
+    void appendCodon(StringBuilder sequence);
+
 }

@@ -38,5 +38,11 @@ public class CodonTest {
         assertTrue(c.isTerminationCodon());
     }
 
-
+    @Test
+    public void shouldBuiltSequenceFromListOfCodon(){
+        System.out.println("* Genetic Code: shouldBuiltSequenceFromListOfCodon()\n");
+        List<ICodon> codons = SequenceConverter.sequence2CodonList(new StringBuilder("UACGAGCUUAUGAACGUCAA"));
+        assertEquals("UACGAGCUUAUGAACGUCAA", SequenceConverter.codonList2Sequence(codons).toString());
+    }
+    
 }

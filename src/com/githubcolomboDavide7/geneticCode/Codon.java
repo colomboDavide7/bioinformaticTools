@@ -32,4 +32,9 @@ public class Codon implements ICodon {
         return ValidCodon.make(c).type == CodonType.UNDEFINED;
     }
 
+    @Override
+    public void appendCodon(StringBuilder sequence) {
+        sequence.append(this.c);
+    }
+
 }
