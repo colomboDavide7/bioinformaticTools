@@ -1,15 +1,25 @@
 package com.githubcolomboDavide7.geneticCode;
 
-public abstract class Codon {
+public class Codon implements ICodon {
 
-    protected String c;
+    public static ICodon make(ValidCodon c){
+        return new Codon(c);
+    }
 
-    public Codon(String c){
+    private final ValidCodon c;
+
+    private Codon(ValidCodon c){
         this.c = c;
     }
 
-    public boolean matchCodon(Codon codon){
-        return this.c.equalsIgnoreCase(codon.c);
+    @Override
+    public boolean matchCodon(ValidCodon c){
+        return this.c.name().equals(c.name());
+    }
+
+    @Override
+    public boolean isStartCodon() {
+        return this.c.type == CodonType.START;
     }
 
 }

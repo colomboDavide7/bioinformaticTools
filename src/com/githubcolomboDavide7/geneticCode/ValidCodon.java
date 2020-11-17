@@ -65,7 +65,8 @@ public enum ValidCodon {
     GGU(CodonType.MIDDLE),
     GGC(CodonType.MIDDLE),
     GGA(CodonType.MIDDLE),
-    GGG(CodonType.MIDDLE);
+    GGG(CodonType.MIDDLE),
+    UNDEFINED(CodonType.UNDEFINED);
 
     public final CodonType type;
 
@@ -73,11 +74,11 @@ public enum ValidCodon {
         this.type = type;
     }
 
-    public static CodonType make(String c){
+    public static ValidCodon make(String c){
         for(ValidCodon v : ValidCodon.values())
             if(c.equalsIgnoreCase(v.toString()))
-                return v.type;
-        return CodonType.UNDEFINED;
+                return v;
+        return ValidCodon.UNDEFINED;
     }
 
 }
