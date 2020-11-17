@@ -22,4 +22,14 @@ public class Codon implements ICodon {
         return this.c.type == CodonType.START;
     }
 
+    @Override
+    public boolean isTerminationCodon() {
+        return this.c.type == CodonType.TERMINATION;
+    }
+
+    @Override
+    public boolean isUndefined() {
+        return this.c.type == CodonType.UNDEFINED;
+    }
+
 }

@@ -6,4 +6,8 @@ public interface ICodon {
 
     boolean isStartCodon();
 
+    boolean isTerminationCodon();
+
+    boolean isUndefined();
+
 }
