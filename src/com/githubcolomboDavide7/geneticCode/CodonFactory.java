@@ -9,17 +9,20 @@ public class CodonFactory {
 
     public static List<Codon> make(StringBuilder sequence){
         List<Codon> codons = new ArrayList<>();
-        int numberOfCodons = (int) Math.ceil(sequence.length() / CODON_LENGTH);
+        int numberOfCodons = (int) Math.ceil(sequence.length() / (double)CODON_LENGTH);
         for(int i = 0; i < numberOfCodons; i++)
             switch(ValidCodon.make(sequence.substring(i * CODON_LENGTH, (i + 1) * CODON_LENGTH))) {
                 case START:
                     codons.add(new StartCodon(sequence.substring(i * CODON_LENGTH, (i + 1) * CODON_LENGTH)));
                     break;
-                case ENCODING:
+                case MIDDLE:
                     codons.add(new MiddleSequenceCodon(sequence.substring(i * CODON_LENGTH, (i + 1) * CODON_LENGTH)));
                     break;
                 case TERMINATION:
-                    codons.add(new NonCodingCodon(sequence.substring(i * CODON_LENGTH, (i + 1) * CODON_LENGTH)));
+                    codons.add(new TerminationCodon(sequence.substring(i * CODON_LENGTH, (i + 1) * CODON_LENGTH)));
+                    break;
+                case UNDEFINED:
+                    codons.add(new UndefinedCodon(sequence.substring(i * CODON_LENGTH, (i + 1) * CODON_LENGTH)));
                     break;
                 default:
                     break;
