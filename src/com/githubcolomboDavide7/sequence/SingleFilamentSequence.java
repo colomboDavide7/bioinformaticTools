@@ -1,7 +1,7 @@
 package com.githubcolomboDavide7.sequence;
 
 import com.githubcolomboDavide7.geneticCode.ICodon;
-import com.githubcolomboDavide7.geneticCode.SequenceConverter;
+import com.githubcolomboDavide7.utils.SequenceConverter;
 import com.githubcolomboDavide7.protein.IProtein;
 import com.githubcolomboDavide7.protein.Protein;
 

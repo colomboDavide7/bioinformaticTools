@@ -9,6 +9,7 @@ import com.githubcolomboDavide7.protein.Protein;
 import com.githubcolomboDavide7.sequence.DoubleFilamentFactory;
 import com.githubcolomboDavide7.sequence.DoubleFilamentSequence;
 import com.githubcolomboDavide7.sequence.SingleFilamentSequence;
+import com.githubcolomboDavide7.utils.SequenceFormatter;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -52,4 +53,14 @@ public class ProteinTest {
         IProtein p = mrna.translate();
         assertTrue(p.matchProtein("YELMNV"));
     }
+
+    @Test
+    public void shouldTestDefaultSchemaFormatter(){
+        System.out.println("* Ammino test: shouldFormatProtein()\n");
+        SequenceFormatter f = SequenceFormatter.defaultSchema();
+        StringBuilder dna = new StringBuilder().append("atgcgctatctgaac");
+        StringBuilder formatted = f.defaultFormat(dna);
+        assertEquals("ATGCGCTATCTGAAC", formatted.toString());
+    }
+
 }

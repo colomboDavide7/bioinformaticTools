@@ -1,4 +1,7 @@
-package com.githubcolomboDavide7.geneticCode;
+package com.githubcolomboDavide7.utils;
+
+import com.githubcolomboDavide7.geneticCode.Codon;
+import com.githubcolomboDavide7.geneticCode.ICodon;
 
 import java.util.ArrayList;
 import java.util.List;

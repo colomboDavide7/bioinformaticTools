@@ -1,6 +1,7 @@
 package codonTest;
 
 import com.githubcolomboDavide7.geneticCode.*;
+import com.githubcolomboDavide7.utils.SequenceConverter;
 import org.junit.Test;
 
 import java.util.List;
