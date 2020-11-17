@@ -75,10 +75,16 @@ public enum ValidCodon {
     }
 
     public static ValidCodon make(String c){
+        if(isValid(c))
+            return ValidCodon.valueOf(c);
+        return ValidCodon.UNDEFINED;
+    }
+
+    public static boolean isValid(String c){
         for(ValidCodon v : ValidCodon.values())
             if(c.equalsIgnoreCase(v.toString()))
-                return v;
-        return ValidCodon.UNDEFINED;
+                return true;
+        return false;
     }
 
 }
