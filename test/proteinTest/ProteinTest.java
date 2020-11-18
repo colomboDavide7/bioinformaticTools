@@ -56,11 +56,20 @@ public class ProteinTest {
 
     @Test
     public void shouldTestDefaultSchemaFormatter(){
-        System.out.println("* Ammino test: shouldFormatProtein()\n");
-        SequenceFormatter f = SequenceFormatter.defaultSchema();
+        System.out.println("* Formatter test: shouldFormatProtein()\n");
+        SequenceFormatter f = SequenceFormatter.getInstance();
         StringBuilder dna = new StringBuilder().append("atgcgctatctgaac");
-        StringBuilder formatted = f.defaultFormat(dna);
+        StringBuilder formatted = f.toUpperCaseFormat(dna);
         assertEquals("ATGCGCTATCTGAAC", formatted.toString());
+    }
+
+    @Test
+    public void shouldAddSeparatorBetweenCodons(){
+        System.out.println("* Formatter test: shouldAddSpaceBetweenCodons()\n");
+        SequenceFormatter f = SequenceFormatter.getInstance();
+        StringBuilder dna = new StringBuilder().append("atgcgctatctgaac");
+        StringBuilder formatted = f.highlightCodons(dna, "-");
+        assertEquals("ATG-CGC-TAT-CTG-AAC", formatted.toString());
     }
 
 }

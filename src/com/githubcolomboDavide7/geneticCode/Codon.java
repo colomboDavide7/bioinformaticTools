@@ -2,6 +2,8 @@ package com.githubcolomboDavide7.geneticCode;
 
 public class Codon implements ICodon {
 
+    public static final int CODON_LENGTH = 3;
+
     public static ICodon make(String c){
         return new Codon(c);
     }
